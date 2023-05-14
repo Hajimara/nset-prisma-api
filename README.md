@@ -76,10 +76,15 @@ Nest is [MIT licensed](LICENSE).
 nest generate module user
 
 ## 프리즈마 DB 명령
-npx prisma generate 
-npx prisma db pull
+```
+$ npx prisma generate 
+```
+```
+$ npx prisma db pull
+```
 
 ## DB SQL
+```
 CREATE TABLE `Post` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int unsigned DEFAULT NULL,
@@ -90,7 +95,9 @@ CREATE TABLE `Post` (
   KEY `user_id` (`user_id`),
   CONSTRAINT `post_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `USER` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
 
+```
 CREATE TABLE `User` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(45) NOT NULL,
@@ -99,3 +106,4 @@ CREATE TABLE `User` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
